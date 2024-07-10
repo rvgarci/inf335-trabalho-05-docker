@@ -4,4 +4,4 @@ copy OlaUnicamp.java
 
 run javac OlaUnicamp.java
 
-run java OlaUnicamp
+cmd java OlaUnicamp
