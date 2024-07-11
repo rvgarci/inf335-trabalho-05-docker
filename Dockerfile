@@ -2,7 +2,7 @@
 FROM openjdk:11
 
 # Copia o arquivo Java para dentro do contêiner
-COPY OlaUnicamp.java /usr/src/app/OlaUnicamp.java
+COPY src/main/java/br/unicamp/ic/inf335/OlaUnicamp.java /usr/src/app/OlaUnicamp.java
 
 # Define o diretório de trabalho
 WORKDIR /usr/src/app
