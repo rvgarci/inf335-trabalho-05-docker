@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh """
+                    bat """
                     docker build -t inf335-trabalho-05 .
                     """
                 }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh """
+                    bat """
                     docker run --rm inf335-trabalho-05
                     """
                 }
