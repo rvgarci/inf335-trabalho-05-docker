@@ -3,6 +3,8 @@ pipeline {
         label any
     }
     stages {
-        
+        stage("build") {
+            
+        }
     }
 }
