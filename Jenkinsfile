@@ -1,12 +1,12 @@
 pipeline {
   agent {
-    label "linux"
+    label any
   }
   stages {
     stage("build") {
       steps {
         sh """
-        docker build -t OlaMundo .
+        docker build -t OlaMundo
         """
       }
     }
