@@ -1,16 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
                 script {
                     bat """
-                    docker build -t inf335-trabalho-05 .
+                    docker build -t inf335-trabalho-05
                     """
                 }
             }
         }
-        stage('Test') {
+        stage('run') {
             steps {
                 script {
                     bat """
