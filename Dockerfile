@@ -11,4 +11,4 @@ WORKDIR /usr/src/app
 RUN javac OlaUnicamp.java
 
 # Executa o comando java para rodar a classe OlaUnicamp
-CMD ["java", "OlaUnicamp"]
+CMD ["java", "OlaUnicamp.java"]
