@@ -4,16 +4,18 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Exemplo de construção de uma imagem Docker
-                    docker.build('nome-da-imagem:tag') 
+                    sh """
+                    docker build -t inf335-trabalho-05 .
+                    """
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    // Exemplo de execução de um contêiner Docker
-                    docker.image('nome-da-imagem:tag').run() 
+                    sh """
+                    docker run --rm inf335-trabalho-05
+                    """
                 }
             }
         }
