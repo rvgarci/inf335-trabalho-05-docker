@@ -1,7 +1,14 @@
-from image openjdk:11
+# Usa a imagem base com JDK 11
+FROM openjdk:11
 
-copy OlaUnicamp.java
+# Copia o arquivo Java para dentro do contêiner
+COPY OlaUnicamp.java /usr/src/app/OlaUnicamp.java
 
-run javac OlaUnicamp.java
+# Define o diretório de trabalho
+WORKDIR /usr/src/app
 
-cmd java OlaUnicamp
+# Compila o arquivo Java
+RUN javac OlaUnicamp.java
+
+# Executa o comando java para rodar a classe OlaUnicamp
+CMD ["java", "OlaUnicamp"]
